@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resident Leave Calendar</title>
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+</head>
+<body>
+  <h2>📅 Resident Leave Calendar</h2>
+  <div id="calendar"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let calendarEl = document.getElementById('calendar');
+      let calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events: '/events',
+        height: "auto"
+      });
+      calendar.render();
+    });
+  </script>
+</body>
+</html>
